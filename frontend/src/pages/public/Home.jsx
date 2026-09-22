@@ -27,14 +27,13 @@ export const Home = () => {
     <div style={{ color: '#fff' }}>
       
       {/* Hero Section */}
-      <section style={{ 
+      <section className="app-container" style={{ 
         position: 'relative', 
-        padding: '100px 24px 80px', 
-        maxWidth: 1400, 
-        margin: '0 auto',
+        paddingTop: 'clamp(40px, 8vw, 100px)',
+        paddingBottom: 'clamp(40px, 6vw, 80px)',
         display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(360px, 1fr))',
-        gap: 60,
+        gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 340px), 1fr))',
+        gap: 'clamp(32px, 5vw, 60px)',
         alignItems: 'center'
       }}>
         <div>
@@ -42,38 +41,38 @@ export const Home = () => {
             display: 'inline-flex', alignItems: 'center', gap: 8, 
             background: 'rgba(59, 130, 246, 0.12)', border: '1px solid rgba(59, 130, 246, 0.3)',
             padding: '6px 14px', borderRadius: 999, fontSize: '0.82rem', fontWeight: 700, color: '#38bdf8',
-            marginBottom: 24 
+            marginBottom: 20 
           }}>
             <Sparkles size={16} />
             <span>Digital Guest Registration & Tourism Intelligence</span>
           </div>
 
-          <h1 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', lineHeight: 1.1, fontWeight: 800, marginBottom: 20 }}>
+          <h1 style={{ fontSize: 'clamp(2.2rem, 5vw, 4rem)', lineHeight: 1.1, fontWeight: 800, marginBottom: 16 }}>
             ATITHYA<span style={{ color: '#38bdf8' }}>360</span>
           </h1>
           
-          <div style={{ fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', color: '#cbd5e1', fontWeight: 600, marginBottom: 20 }}>
+          <div style={{ fontSize: 'clamp(1.1rem, 2.5vw, 1.5rem)', color: '#cbd5e1', fontWeight: 600, marginBottom: 16 }}>
             "Smarter Stays. Safer Destinations."
           </div>
 
-          <p style={{ fontSize: '1.05rem', color: '#94a3b8', lineHeight: 1.7, marginBottom: 32 }}>
+          <p style={{ fontSize: '1rem', color: '#94a3b8', lineHeight: 1.6, marginBottom: 28 }}>
             A unified digital governance platform for digital guest check-ins, accommodation compliance, authorized police inspection, and macro tourism intelligence.
           </p>
 
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 14 }}>
-            <Link to="/register" className="btn btn-primary" style={{ padding: '12px 24px', fontSize: '1rem' }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
+            <Link to="/register" className="btn btn-primary" style={{ padding: '12px 20px', fontSize: '0.95rem' }}>
               <span>Register Property</span>
               <ArrowRight size={18} />
             </Link>
-            <Link to="/how-it-works" className="btn btn-secondary" style={{ padding: '12px 24px', fontSize: '1rem' }}>
+            <Link to="/how-it-works" className="btn btn-secondary" style={{ padding: '12px 20px', fontSize: '0.95rem' }}>
               <span>Explore Platform</span>
             </Link>
           </div>
 
           {/* Key Metrics Banner */}
           <div style={{ 
-            display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16, 
-            marginTop: 48, paddingTop: 32, borderTop: '1px solid #1f2d47' 
+            display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(100px, 1fr))', gap: 16, 
+            marginTop: 36, paddingTop: 24, borderTop: '1px solid #1f2d47' 
           }}>
             <div>
               <div style={{ fontSize: '1.8rem', fontWeight: 800, color: '#38bdf8' }}>{kpi.properties.active}+</div>

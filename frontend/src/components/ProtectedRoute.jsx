@@ -37,9 +37,9 @@ export const ProtectedRoute = ({ allowedRoles = [] }) => {
   return (
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', background: '#0b0f19' }}>
       <Navbar />
-      <div style={{ display: 'flex', flex: 1 }}>
+      <div style={{ display: 'flex', flex: 1, position: 'relative' }}>
         <Sidebar />
-        <main style={{ flex: 1, padding: '32px 36px', overflowX: 'hidden' }}>
+        <main className="dashboard-main">
           <Outlet />
         </main>
       </div>

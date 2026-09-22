@@ -247,11 +247,171 @@ input:focus, select:focus, textarea:focus {
   background: rgba(30, 41, 59, 0.5);
 }
 
-/* Grid Layouts */
-.grid-cols-auto {
+.grid-property-dashboard {
+  grid-template-columns: 1fr;
+}
+@media (min-width: 1024px) {
+  .grid-property-dashboard {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+/* Fluid Responsive Grids */
+.grid-1-2-4 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+@media (min-width: 640px) {
+  .grid-1-2-4 { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+}
+@media (min-width: 1024px) {
+  .grid-1-2-4 { grid-template-columns: repeat(4, 1fr); gap: 24px; }
+}
+
+.grid-1-2-3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+@media (min-width: 640px) {
+  .grid-1-2-3 { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+}
+@media (min-width: 1024px) {
+  .grid-1-2-3 { grid-template-columns: repeat(3, 1fr); gap: 24px; }
+}
+
+.grid-1-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+@media (min-width: 900px) {
+  .grid-1-2 { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+}
+
+/* Responsive Table Wrapper */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: var(--radius-md);
+  margin-bottom: 16px;
+}
+.table-responsive::-webkit-scrollbar {
+  height: 6px;
+}
+
+/* Responsive Container & Padding */
+.app-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+@media (min-width: 768px) {
+  .app-container { padding: 0 24px; }
+}
+@media (min-width: 1200px) {
+  .app-container { padding: 0 32px; }
+}
+
+.dashboard-main {
+  flex: 1;
+  padding: 16px;
+  width: 100%;
+  min-width: 0;
+  overflow-x: hidden;
+}
+@media (min-width: 768px) {
+  .dashboard-main { padding: 24px; }
+}
+@media (min-width: 1024px) {
+  .dashboard-main { padding: 32px 36px; }
+}
+
+/* Responsive Flex Controls */
+.responsive-header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+@media (min-width: 768px) {
+  .responsive-header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.responsive-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+.responsive-filter-bar > * {
+  flex: 1 1 200px;
+}
+
+/* Modal Responsive Sizing */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 12px;
+}
+.modal-container {
+  background: #0f172a;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 700px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+}
+
+/* Chart Container Sizing */
+.chart-container {
+  position: relative;
+  width: 100%;
+  height: 280px;
+}
+@media (min-width: 768px) {
+  .chart-container { height: 320px; }
+}
+@media (min-width: 1200px) {
+  .chart-container { height: 360px; }
+}
+
+/* Responsive Typography */
+.hero-title {
+  font-size: clamp(1.85rem, 5vw, 3.4rem);
+  line-height: 1.15;
+}
+.section-title {
+  font-size: clamp(1.4rem, 3.5vw, 2.2rem);
+  line-height: 1.2;
+}
+
+/* Touch Friendly Targets */
+@media (max-width: 768px) {
+  .btn {
+    min-height: 42px;
+    padding: 10px 16px;
+  }
+  input, select, textarea {
+    min-height: 42px;
+    font-size: 16px !important; /* Prevents iOS auto-zoom on input focus */
+  }
 }
 
 /* Animations */

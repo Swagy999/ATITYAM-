@@ -200,11 +200,11 @@ export const PropertyDashboard = () => {
       </div>
 
       {/* Main Grid: Active Stays Table & Room Grid */}
-      <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: 24, marginBottom: 36 }}>
+      <div className="grid-property-dashboard" style={{ display: 'grid', gap: 24, marginBottom: 36 }}>
         
         {/* Active Stays Panel */}
-        <div className="glass-panel" style={{ padding: 24 }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 20 }}>
+        <div className="glass-panel" style={{ padding: 20 }}>
+          <div className="responsive-header" style={{ marginBottom: 16 }}>
             <div>
               <h2 style={{ fontSize: '1.25rem', fontWeight: 700 }}>In-House Guest Stays</h2>
               <p style={{ fontSize: '0.8rem', color: '#94a3b8' }}>Live checked-in guests at this property</p>

@@ -195,10 +195,10 @@ export const PoliceDashboard = () => {
       </div>
 
       {/* Main Grid: Search Results & Safety Alerts Queue */}
-      <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: 24, marginBottom: 36 }}>
+      <div className="grid-property-dashboard" style={{ display: 'grid', gap: 24, marginBottom: 36 }}>
         
         {/* Search Results Table */}
-        <div className="glass-panel" style={{ padding: 24 }}>
+        <div className="glass-panel" style={{ padding: 20 }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 20 }}>
             <div>
               <h2 style={{ fontSize: '1.25rem', fontWeight: 700 }}>Stay Records ({searchResults.length})</h2>
